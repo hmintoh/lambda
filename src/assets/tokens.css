@@ -1,0 +1,30 @@
+:root {
+  --font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+
+  --color-black: #000;
+  --color-white: #fff;
+  --color-grey-500: #535151;
+  --color-grey-400: #6f6f6f;
+  --color-grey-300: #a8a8a8;
+  --color-grey-200: #d6d6d6;
+  --color-grey-100: #f2f2f2;
+
+  --sp-40: 40px;
+  --sp-32: 32px;
+  --sp-24: 24px;
+  --sp-16: 16px;
+  --sp-12: 12px;
+  --sp-8: 8px;
+  --sp-4: 4px;
+  --sp-2: 2px;
+  --sp-1: 1px;
+
+  --font-size-4xl: 2.5rem;
+  --font-size-3xl: 2rem;
+  --font-size-2xl: 1.8rem;
+  --font-size-xl: 1.4rem;
+  --font-size-l: 1.2rem;
+  --font-size-m: 1rem;
+  --font-size-s: 0.85rem;
+  --font-size-xs: 0.75rem;
+}

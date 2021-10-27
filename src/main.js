@@ -2,6 +2,7 @@ import { createApp } from 'vue';
 import { createRouter, createWebHistory } from 'vue-router';
 
 import App from './App.vue';
+import './assets/tokens.css';
 
 const ViewHome = () => import('./views/home.vue');
 const ViewServices = () => import('./views/services.vue');
