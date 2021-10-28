@@ -34,7 +34,7 @@
 
   --breakpoint-tablet: 768px;
   --breakpoint-desktop: 1024px;
-  --breakpoint-max-container: 900px;
+  --breakpoint-max-container: 800px;
 
   --transition-slow: all 1s ease-in-out;
   --transition-default: all 0.5s ease-in-out;
