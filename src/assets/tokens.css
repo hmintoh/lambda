@@ -32,8 +32,6 @@
   --font-weight-semi: 600;
   --font-weight-reg: 400;
 
-  --breakpoint-tablet: 768px;
-  --breakpoint-desktop: 1024px;
   --breakpoint-max-container: 800px;
 
   --transition-slow: all 1s ease-in-out;
@@ -41,29 +39,44 @@
   --transition-fast: all 0.15s ease-in-out;
 }
 
-.heading--h1 {
+h1 {
   font-size: var(--font-size-4xl);
   font-weight: var(--font-weight-bold);
 }
-.heading--h2 {
+h2 {
   font-size: var(--font-size-3xl);
   font-weight: var(--font-weight-bold);
 }
-.heading--h3 {
+h3 {
   font-size: var(--font-size-2xl);
   font-weight: var(--font-weight-bold);
 }
-.heading--h4 {
+h4,
+.--heading-h4 {
   font-size: var(--font-size-xl);
   font-weight: var(--font-weight-semi);
 }
-.heading--h5 {
+h5 {
   font-size: var(--font-size-l);
   font-weight: var(--font-weight-semi);
 }
-.heading--h6 {
+h6 {
   font-size: var(--font-size-m);
   font-weight: var(--font-weight-semi);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: var(--sp-16);
+  margin-bottom: var(--sp-16);
+}
+.subtitle {
+  font-size: var(--font-size-l);
+  font-weight: var(--font-weight-reg);
+  margin-top: 0;
 }
 .lambda-link {
   text-decoration: none;

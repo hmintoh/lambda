@@ -1,5 +1,7 @@
 <template>
-  <div class="main-content"><router-view></router-view></div>
+  <div class="main-content">
+    <router-view></router-view>
+  </div>
   <TheFooter />
 </template>
 
@@ -18,6 +20,7 @@ export default {
 html,
 body {
   height: 100%;
+  width: 100%;
   margin: 0;
   padding: 0;
 }
@@ -26,24 +29,21 @@ body {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  height: inherit;
   color: #2c3e50;
   display: flex;
   flex-direction: column;
-  height: inherit;
 }
 
 .main-content {
   flex: 1;
   margin: auto;
-  height: inherit;
+  width: 100%;
   padding: 0 var(--sp-16);
 }
 
 @media (min-width: 768px) {
   .main-content {
-    padding-left: 0;
-    padding-right: 0;
     max-width: var(--breakpoint-max-container);
   }
 }

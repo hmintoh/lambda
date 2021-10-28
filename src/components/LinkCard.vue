@@ -18,23 +18,33 @@ export default {
 
 <style scoped>
 .card {
-  background: var(--color-grey-100);
-  padding: var(--sp-16);
-  text-align: center;
-  align-items: center;
-  border-radius: var(--sp-8);
   width: 240px;
+  height: 100px;
+  background: linear-gradient(
+    var(--color-grey-100),
+    var(--color-grey-200),
+    var(--color-grey-200)
+  );
+  padding: var(--sp-16);
+  border-radius: var(--sp-8);
   cursor: pointer;
   box-sizing: border-box;
-  display: block;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .card:hover {
-  opacity: 0.9;
-  background: var(--color-grey-200);
+  background: linear-gradient(var(--color-grey-200), var(--color-grey-200));
   transition: var(--transition-default);
   -webkit-box-shadow: 4px 4px 11px 0px var(--color-grey-200);
   -moz-box-shadow: 4px 4px 11px 0px var(--color-grey-200);
   box-shadow: 4px 4px 11px 0px var(--color-grey-200);
+}
+
+::v-slotted(*) {
+  display: block;
+  width: 100%;
 }
 </style>
