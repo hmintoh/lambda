@@ -65,7 +65,7 @@
       </ul>
 
       <p>Our partners:</p>
-      <div class="link-card-container">
+      <div class="carousel-container">
         <LinkCard
           v-for="(partner, index) in consultPartners"
           :key="index"
@@ -168,13 +168,5 @@ export default {
 <style scoped>
 .accordion {
   margin: var(--sp-24) 0;
-}
-
-.link-card-container {
-  display: flex;
-}
-
-.link-card-container > * {
-  margin-right: var(--sp-16);
 }
 </style>

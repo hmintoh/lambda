@@ -51,7 +51,7 @@ export default {
   font-size: var(--font-size-s);
   color: inherit;
   background: none;
-  margin-right: var(--sp-16);
+  margin-right: var(--sp-12);
   cursor: pointer;
   border-radius: var(--sp-16);
   border: 1px solid var(--color-grey-400);

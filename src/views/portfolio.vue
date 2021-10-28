@@ -18,6 +18,7 @@
           :key="index"
           :imgSrc="design.img"
           :imgAlt="design.desc"
+          class="hover-card"
         >
           <p class="--heading-h4">{{ design.label }}</p>
           <p class="subtitle">{{ design.desc }}</p>
@@ -163,13 +164,7 @@ section {
   padding-top: var(--sp-24);
 }
 
-.carousel-container {
-  display: flex;
-  overflow-x: scroll;
-}
-
-.carousel-container > * {
-  margin-right: var(--sp-16);
+.hover-card {
   min-width: 720px;
 }
 </style>

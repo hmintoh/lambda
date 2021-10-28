@@ -1,6 +1,9 @@
 <template>
   <div :id="id" class="accordion">
-    <div class="accordion--title" @click="expandAccordion = !expandAccordion">
+    <div
+      class="accordion--title --heading-h4"
+      @click="expandAccordion = !expandAccordion"
+    >
       {{ title }}
     </div>
 
@@ -79,8 +82,6 @@ export default {
   text-transform: uppercase;
   border-top-left-radius: var(--sp-4);
   border-top-right-radius: var(--sp-4);
-  font-size: var(--font-size-xl);
-  font-weight: var(--font-weight-semi);
 }
 
 .accordion--title:hover {
@@ -89,7 +90,7 @@ export default {
 }
 
 .accordion--body {
-  padding: 0 var(--sp-16);
+  padding: var(--sp-16);
   overflow: hidden;
 }
 

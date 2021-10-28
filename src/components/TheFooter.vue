@@ -13,7 +13,7 @@ export default {};
 <style scoped>
 footer {
   background: var(--color-white);
-  padding: var(--sp-16) 0;
+  padding: var(--sp-16);
   font-size: var(--font-size-s);
   text-align: center;
 }

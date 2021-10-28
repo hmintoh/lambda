@@ -52,6 +52,7 @@ export default {
 <style scoped>
 .main-content {
   flex: 1;
+  width: 100%;
   margin: auto;
 }
 
@@ -66,11 +67,11 @@ export default {
   justify-content: center;
   text-align: center;
   height: 100%;
+  padding: 0 var(--sp-16);
 }
 
 @media (min-width: 768px) {
   .main-content {
-    width: 100%;
     max-width: var(--breakpoint-max-container);
   }
 }

@@ -52,7 +52,7 @@ export default {
 }
 
 .navbar--logo {
-  width: 60px;
+  width: 50px;
 }
 
 .navbar--nav {

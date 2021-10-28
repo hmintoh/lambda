@@ -11,8 +11,10 @@
       Presence in all aspects of music, be it in acoustic design or in live
       mixing.
     </p>
+
     <br />
-    <router-link title="Lambda Acoustics" to="/services">
+
+    <router-link title="Lambda Acoustics" to="/services" class="lambda-link">
       Browse our services
     </router-link>
   </PageLayout>
@@ -41,5 +43,12 @@ export default {
 img {
   width: 100%;
   max-width: 400px;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+  }
 }
 </style>
