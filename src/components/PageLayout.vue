@@ -1,13 +1,21 @@
 <template>
   <div class="main-content">
     <div v-if="withNavbar" class="container--default">
-      <TheNavbar />
+      <transition name="fade-delay">
+        <TheNavbar v-if="pageLoaded" />
+      </transition>
+
       <br />
-      <slot />
+
+      <transition name="fade">
+        <div v-if="pageLoaded"><slot /></div>
+      </transition>
     </div>
 
     <div v-else class="container--centered">
-      <slot />
+      <transition name="fade">
+        <div v-if="pageLoaded"><slot /></div>
+      </transition>
     </div>
   </div>
 
@@ -29,6 +37,14 @@ export default {
       type: Boolean,
       default: false,
     },
+  },
+  data() {
+    return {
+      pageLoaded: false,
+    };
+  },
+  mounted() {
+    this.pageLoaded = true;
   },
 };
 </script>

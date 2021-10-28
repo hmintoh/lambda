@@ -11,9 +11,7 @@
       Presence in all aspects of music, be it in acoustic design or in live
       mixing.
     </p>
-
     <br />
-
     <router-link title="Lambda Acoustics" to="/services">
       Browse our services
     </router-link>
@@ -27,6 +25,14 @@ export default {
   name: 'ViewHome',
   components: {
     PageLayout,
+  },
+  data() {
+    return {
+      pageLoaded: false,
+    };
+  },
+  mounted() {
+    this.pageLoaded = true;
   },
 };
 </script>
