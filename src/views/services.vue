@@ -2,7 +2,7 @@
   <div class="container">
     <TheNavbar />
 
-    <h1 class="heading--h1">Our services</h1>
+    <h1>Our services</h1>
 
     <Accordion id="live" title="Live" class="accordion">
       <p>
