@@ -1,7 +1,5 @@
 <template>
-  <div class="container">
-    <TheNavbar />
-
+  <PageLayout withNavbar>
     <h1>Our services</h1>
 
     <Accordion id="live" title="Live" class="accordion">
@@ -108,12 +106,12 @@
         that allow for optimal acoustic coverage in our client's spaces.
       </p>
     </Accordion>
-  </div>
+  </PageLayout>
 </template>
 
 <script>
+import PageLayout from '../components/PageLayout.vue';
 import Accordion from '../components/Accordion.vue';
-import TheNavbar from '../components/TheNavbar.vue';
 import LinkCard from '../components/LinkCard.vue';
 import imgdb from '../assets/db_logo.svg';
 import imglacoustics from '../assets/lacoustics_logo.svg';
@@ -121,8 +119,8 @@ import imglacoustics from '../assets/lacoustics_logo.svg';
 export default {
   name: 'ViewServices',
   components: {
+    PageLayout,
     Accordion,
-    TheNavbar,
     LinkCard,
   },
   data() {

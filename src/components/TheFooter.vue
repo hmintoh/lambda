@@ -1,7 +1,8 @@
 <template>
   <footer>
-    \ Address: #05-03, 196 Pandan Loop, Singapore 128384 \ \ Phone: +65 6779
-    2226 \ \ Email: hello@lambda.sg \
+    \ <strong>Address</strong>: #05-03, 196 Pandan Loop, Singapore 128384 \ \
+    <strong>Phone</strong>: +65 6779 2226 \ \ <strong>Email</strong>:
+    hello@lambda.sg \
   </footer>
 </template>
 

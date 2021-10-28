@@ -1,59 +1,65 @@
 <template>
-  <TheNavbar />
-
-  <h1>Portfolio</h1>
-  <p class="subtitle">
-    Explore some of the projects that we have completed over the years.
-  </p>
-
-  <section>
-    <h2>Designs</h2>
-    <p>
-      We take pride in accurately mapping out our designs in 3D to ensure even
-      Sound Pressure Level coverage throughout the listening plane and avoid
-      unwanted reflections and visual blockages.
+  <PageLayout withNavbar>
+    <h1>Portfolio</h1>
+    <p class="subtitle">
+      Explore some of the projects that we have completed over the years.
     </p>
-    <div class="carousel-container">
-      <HoverCard
-        v-for="(design, index) in designs"
-        :key="index"
-        :imgSrc="design.img"
-        :imgAlt="design.desc"
-      >
-        <p class="--heading-h4">{{ design.label }}</p>
-        <p class="subtitle">{{ design.desc }}</p>
-      </HoverCard>
-    </div>
-  </section>
 
-  <section>
-    <h2>Past projects</h2>
-    <p>Some of the clients we have worked with over the years:</p>
-    <Tablist
-      :labels="pastProjects.map((project) => project.year)"
-      v-on:set-tab-index="activeProjectTab = $event"
-    >
-      <ul>
-        <li
-          v-for="(project, index) in pastProjects[activeProjectTab]['projects']"
+    <section>
+      <h2>Designs</h2>
+      <p>
+        We take pride in accurately mapping out our designs in 3D to ensure even
+        Sound Pressure Level coverage throughout the listening plane and avoid
+        unwanted reflections and visual blockages.
+      </p>
+      <div class="carousel-container">
+        <HoverCard
+          v-for="(design, index) in designs"
           :key="index"
+          :imgSrc="design.img"
+          :imgAlt="design.desc"
         >
-          {{ project }}
-        </li>
-      </ul>
-    </Tablist>
-  </section>
+          <p class="--heading-h4">{{ design.label }}</p>
+          <p class="subtitle">{{ design.desc }}</p>
+        </HoverCard>
+      </div>
+    </section>
 
-  <section>
-    <h2>In the news</h2>
-    <LinkCard v-for="(news, index) in inTheNews" :key="index" :url="news.href">
-      <img :src="news.imgSrc" :alt="news.imgAlt" />
-    </LinkCard>
-  </section>
+    <section>
+      <h2>Past projects</h2>
+      <p>Some of the clients we have worked with over the years:</p>
+      <Tablist
+        :labels="pastProjects.map((project) => project.year)"
+        v-on:set-tab-index="activeProjectTab = $event"
+      >
+        <ul>
+          <li
+            v-for="(project, index) in pastProjects[activeProjectTab][
+              'projects'
+            ]"
+            :key="index"
+          >
+            {{ project }}
+          </li>
+        </ul>
+      </Tablist>
+    </section>
+
+    <section>
+      <h2>In the news</h2>
+      <LinkCard
+        v-for="(news, index) in inTheNews"
+        :key="index"
+        :url="news.href"
+      >
+        <img :src="news.imgSrc" :alt="news.imgAlt" />
+      </LinkCard>
+    </section>
+  </PageLayout>
 </template>
 
 <script>
-import TheNavbar from '../components/TheNavbar.vue';
+import PageLayout from '../components/PageLayout.vue';
 import Tablist from '../components/Tablist.vue';
 import LinkCard from '../components/LinkCard.vue';
 import HoverCard from '../components/HoverCard.vue';
@@ -66,7 +72,7 @@ import imgSingLang2 from '../assets/singlang-2019-2.png';
 export default {
   name: 'ViewPortfolio',
   components: {
-    TheNavbar,
+    PageLayout,
     Tablist,
     HoverCard,
     LinkCard,
@@ -154,7 +160,7 @@ export default {
 
 <style scoped>
 section {
-  padding: var(--sp-16) 0;
+  padding-top: var(--sp-24);
 }
 
 .carousel-container {

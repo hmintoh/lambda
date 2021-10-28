@@ -1,8 +1,7 @@
 <template>
-  <div class="container">
-    <img :src="logo" alt="lambda-logo" title="Click to go to Services page" />
-
+  <PageLayout>
     <h1>// PURSUING PRESENCE //</h1>
+
     <p>
       Musical presence defines why an individual prefers the acoustics of a room
       to another or why one prefers a certain audio mix to another.
@@ -13,34 +12,26 @@
       mixing.
     </p>
 
+    <br />
+
     <router-link title="Lambda Acoustics" to="/services">
-      See our services</router-link
-    >
-  </div>
+      Browse our services
+    </router-link>
+  </PageLayout>
 </template>
 
 <script>
-import logo from '../assets/lambda_logo_with_name.jpg';
+import PageLayout from '../components/PageLayout.vue';
 
 export default {
   name: 'ViewHome',
-  data() {
-    return {
-      logo: logo,
-    };
+  components: {
+    PageLayout,
   },
 };
 </script>
 
 <style scoped>
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
 img {
   width: 100%;
   max-width: 400px;
