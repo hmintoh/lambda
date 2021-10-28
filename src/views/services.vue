@@ -2,6 +2,8 @@
   <div class="container">
     <TheNavbar />
 
+    <h1 class="heading--h1">Our services</h1>
+
     <Accordion id="live" title="Live" class="accordion">
       <p>
         We are blessed have been a part of many keystone events in some of the
@@ -63,6 +65,17 @@
           {{ client }}
         </li>
       </ul>
+
+      <p>Our partners:</p>
+      <div class="link-card-container">
+        <LinkCard
+          v-for="(partner, index) in consultPartners"
+          :key="index"
+          :url="partner.href"
+        >
+          <img :src="partner.imgSrc" :alt="partner.imgAlt" />
+        </LinkCard>
+      </div>
     </Accordion>
 
     <Accordion id="broadcast" title="Broadcast + Studio" class="accordion">
@@ -101,12 +114,16 @@
 <script>
 import Accordion from '../components/Accordion.vue';
 import TheNavbar from '../components/TheNavbar.vue';
+import LinkCard from '../components/LinkCard.vue';
+import imgdb from '../assets/db_logo.svg';
+import imglacoustics from '../assets/lacoustics_logo.svg';
 
 export default {
   name: 'ViewServices',
   components: {
     Accordion,
     TheNavbar,
+    LinkCard,
   },
   data() {
     return {
@@ -133,6 +150,18 @@ export default {
         'Petra Church Singapore',
         'Impact Life Church Singapore @ Toh Guan',
       ],
+      consultPartners: [
+        {
+          href: 'https://www.dbaudio.com/global/en/',
+          imgAlt: 'd&b Audiotechnik logo',
+          imgSrc: imgdb,
+        },
+        {
+          href: 'https://www.l-acoustics.com/en/',
+          imgAlt: 'L-Acoustics logo',
+          imgSrc: imglacoustics,
+        },
+      ],
     };
   },
 };
@@ -141,5 +170,13 @@ export default {
 <style scoped>
 .accordion {
   margin: var(--sp-24) 0;
+}
+
+.link-card-container {
+  display: flex;
+}
+
+.link-card-container > * {
+  margin-right: var(--sp-16);
 }
 </style>
