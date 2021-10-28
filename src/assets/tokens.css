@@ -36,9 +36,9 @@
   --breakpoint-desktop: 1024px;
   --breakpoint-max-container: 900px;
 
-  --transition-slow: all 2s ease-in-out;
+  --transition-slow: all 1s ease-in-out;
   --transition-default: all 0.5s ease-in-out;
-  --transition-fast: all 0.2s ease-in-out;
+  --transition-fast: all 0.15s ease-in-out;
 }
 
 .heading--h1 {
@@ -65,7 +65,18 @@
   font-size: var(--font-size-m);
   font-weight: var(--font-weight-semi);
 }
-p {
+.lambda-link {
+  text-decoration: none;
+  border-bottom: var(--sp-1) solid var(--color-grey-400);
+}
+.lambda-link:hover {
+  border-bottom: var(--sp-4) solid var(--color-grey-400);
+  transition: var(--transition-fast);
+}
+
+p,
+a {
   font-size: var(--font-size-m);
   font-weight: var(--font-weight-reg);
+  color: inherit;
 }
