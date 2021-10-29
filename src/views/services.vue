@@ -4,8 +4,8 @@
 
     <Accordion id="live" title="Live" class="accordion">
       <p>
-        We are blessed have been a part of many keystone events in some of the
-        largest arenas in Singapore. We believe that attention to detail and
+        We are blessed to have been a part of many keystone events in some of
+        the largest arenas in Singapore. We believe that attention to detail and
         proper speaker design are what allows us to consistently achieve our
         highest ideals of pursuing presence. Together with our AV rental
         partners, we are able to offer our clients some of the best speaker
@@ -79,14 +79,12 @@
     <Accordion id="broadcast" title="Broadcast + Studio" class="accordion">
       <p>
         The landscape for audio production has changed dramatically in this new
-        decade, live streaming and audio broadcast has become a necessity for
-        clients.
+        decade, where live streaming and audio broadcast has become a necessity
+        for clients. Our team has successfully helped our clients implement
+        broadcast services for traditional mediums like TV as well as modern
+        platforms such as YouTube and Facebook Live.
       </p>
-      <p>
-        Our team has vast experience working with our clients on broadcast
-        projects for traditional mediums like TV as well as modern platforms
-        such as YouTube and Facebook Live.
-      </p>
+
       <p>
         For capturing live events, we have a suite of high quality equipment
         that allows for multitrack recording and post production. Our engineers

@@ -1,21 +1,19 @@
 <template>
   <div class="main-content">
     <div v-if="withNavbar" class="container--default">
-      <transition name="fade-delay">
-        <TheNavbar v-if="pageLoaded" />
+      <transition appear name="fade-delay">
+        <TheNavbar />
       </transition>
 
       <br />
 
-      <transition name="fade">
-        <div v-if="pageLoaded"><slot /></div>
+      <transition appear name="fade">
+        <div><slot /></div>
       </transition>
     </div>
 
     <div v-else class="container--centered">
-      <transition name="fade">
-        <div v-if="pageLoaded"><slot /></div>
-      </transition>
+      <slot />
     </div>
   </div>
 
@@ -37,14 +35,6 @@ export default {
       type: Boolean,
       default: false,
     },
-  },
-  data() {
-    return {
-      pageLoaded: false,
-    };
-  },
-  mounted() {
-    this.pageLoaded = true;
   },
 };
 </script>

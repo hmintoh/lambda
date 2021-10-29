@@ -104,8 +104,19 @@ a {
   color: inherit;
 }
 
+.carousel-container {
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.carousel-container > *:not(:last-child) {
+  margin-right: var(--sp-16);
+}
+
 /* transitions */
-.fade-enter-active {
+.fade-enter-active,
+.slide-fade-enter-active {
   transition: var(--transition-slow);
   transition-delay: 0.2s;
 }
@@ -116,16 +127,13 @@ a {
 }
 
 .fade-enter-from,
-.fade-delay-enter-from {
+.fade-delay-enter-from,
+.slide-fade-enter-from,
+.slide-fade-leave-to {
   opacity: 0;
 }
 
-.carousel-container {
-  display: flex;
-  overflow-x: scroll;
-  overflow-y: hidden;
-}
-
-.carousel-container > *:not(:last-child) {
-  margin-right: var(--sp-16);
+.slide-fade-leave-active {
+  transition: var(--transition-slow);
+  transform: translateY(-80%);
 }
