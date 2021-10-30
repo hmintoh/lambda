@@ -54,7 +54,7 @@ export default {
     const showContent = ref(false);
 
     const afterEnter = () => {
-      setTimeout(() => (showLogo.value = false), 2000);
+      setTimeout(() => (showLogo.value = false), 1000);
     };
     const afterLeave = () => {
       showContent.value = true;

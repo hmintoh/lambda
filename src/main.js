@@ -1,5 +1,6 @@
 import { createApp } from 'vue';
 import { createRouter, createWebHistory } from 'vue-router';
+import Vue3TouchEvents from 'vue3-touch-events';
 
 import App from './App.vue';
 import './assets/tokens.css';
@@ -26,5 +27,6 @@ const router = createRouter({
 
 const app = createApp(App);
 
+app.use(Vue3TouchEvents);
 app.use(router);
 app.mount('#app');

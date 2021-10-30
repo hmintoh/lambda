@@ -104,6 +104,14 @@ a {
   color: inherit;
 }
 
+ul {
+  padding-left: var(--sp-32);
+}
+
+ul li {
+  margin-bottom: var(--sp-4);
+}
+
 .carousel-container {
   display: flex;
   overflow-x: scroll;

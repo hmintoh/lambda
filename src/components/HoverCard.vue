@@ -3,6 +3,7 @@
     class="hover-card"
     @mouseenter="revealDetailText = true"
     @mouseleave="revealDetailText = false"
+    v-touch:tap="touchHandler"
   >
     <div :style="applyBackgroundStyles()" />
 
@@ -38,6 +39,9 @@ export default {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       };
+    },
+    touchHandler() {
+      this.revealDetailText = !this.revealDetailText;
     },
   },
 };
