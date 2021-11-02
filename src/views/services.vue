@@ -91,6 +91,22 @@
         are highly experienced and have been able to capture the essence and
         <i>presence</i> of the actual event being documented for the audience.
       </p>
+      <p>Some of our audio broadcast work can be found here:</p>
+
+      <ul>
+        <li v-for="(link, index) in broadcastLinks" :key="index">
+          <a
+            :href="link.url"
+            :alt="link.alt"
+            target="_blank"
+            rel="noopener"
+            class="lambda-link"
+            >{{ link.title }}</a
+          >
+        </li>
+      </ul>
+
+      <p></p>
     </Accordion>
 
     <Accordion
@@ -156,6 +172,18 @@ export default {
           href: 'https://www.l-acoustics.com/en/',
           imgAlt: 'L-Acoustics logo',
           imgSrc: imglacoustics,
+        },
+      ],
+      broadcastLinks: [
+        {
+          url: 'https://youtu.be/8Wxdvy9wsPI',
+          alt: 'The City Singapore',
+          title: 'The City Singapore',
+        },
+        {
+          url: 'https://youtube.com/playlist?list=PLvemBCh-wMM0q1I1VFwHYRg4hCiTmhufR',
+          alt: 'AG Glorify Live Recording',
+          title: 'AG Glorify Live Recording',
         },
       ],
     };
